@@ -1,4 +1,24 @@
 CUPONS_DESCONTO = {
+    'ASD' : 10,
+    'QWE' : 0
+}
+
+def obter_desconto(codigo: str):
+    if codigo is None:
+        return 0
+    if codigo not in CUPONS_DESCONTO:
+        return 0
+    return CUPONS_DESCONTO[codigo]
+
+
+def calcular_total(itens, desconto_percentual=0):
+    """
+    Calcula o total de uma compra.
+
+    Cada item representa uma tupla no formato:
+    (preco_unitario, quantidade)
+    """
+CUPONS_DESCONTO = {
     'DEVOPS10': 10,
 }
 
